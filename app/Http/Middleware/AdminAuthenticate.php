@@ -21,8 +21,8 @@ class AdminAuthenticate extends Middleware
         // }
 
         // foreach ($guards as $guard) {
-            if ($this->auth->guard($admin)->check()) {
-                return $this->auth->shouldUse($admin);
+            if ($this->auth->guard('admin')->check()) {
+                return $this->auth->shouldUse('admin');
             }
 
         $this->unauthenticated($request, ['admin']);

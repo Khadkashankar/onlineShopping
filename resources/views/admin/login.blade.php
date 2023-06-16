@@ -18,6 +18,7 @@
 <body class="hold-transition login-page">
     <div class="login-box">
         <!-- /.login-logo -->
+        @include('admin.message')
         <div class="card card-outline card-primary">
             <div class="card-header text-center">
                 <a href="#" class="h3">Administrative Panel</a>
@@ -27,7 +28,7 @@
                 <form action="{{route('admin.authenticate')}}" method="post">
                     @csrf
                     <div class="input-group mb-3">
-                        <input type="email" name="email" id="email"
+                        <input type="email" name="email" value="{{old('email')}}" id="email"
                             class="form-control @error('email') is-invalid @enderror" placeholder="Email">
                         <div class="input-group-append">
                             <div class="input-group-text">
