@@ -69,6 +69,6 @@
 @section('customJs')
 
 <script>
-
+console.log("hello");
 </script>
 @endsection
